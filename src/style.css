@@ -1,0 +1,410 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "White Rabbit";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/fonts/whitrabt-webfont.woff") format("woff");
+}
+
+@theme {
+  --color-gray: #414141;
+  --color-rich-black: #101017;
+  --color-shamrock-green: #089c6d;
+  --color-ochre: #f27f04;
+  --color-silver: #a6a6a5;
+  --font-hind-vadodara: Hind Vadodara, sans-serif;
+  --font-fira-code: Fira Code, monospace;
+  --font-white-rabbit: "White Rabbit", monospace;
+}
+
+/* Base styles */
+body {
+  @apply relative flex justify-center items-center h-screen font-white-rabbit content-center bg-rich-black text-silver;
+}
+
+.btn {
+  @apply px-4 py-2 bg-shamrock-green/60 hover:bg-shamrock-green/80 transition-all duration-300 ease-in-out;
+}
+
+.btn-white {
+  @apply px-4 py-2 bg-white text-shamrock-green transition-all duration-300 ease-in-out;
+}
+
+.title {
+  @apply relative w-fit;
+}
+
+.title::after {
+  @apply content-[''] absolute -bottom-1 left-0 w-[50%] h-1 bg-shamrock-green;
+}
+
+.scroll {
+  @apply overflow-y-auto overflow-x-hidden;
+  scrollbar-width: none;
+  scrollbar-color: var(--color-shamrock-green) var(--color-rich-black);
+}
+
+.layout {
+  @apply relative w-[95vw] h-[90vh] m-auto my-auto border-[1px] border-silver transition-all duration-300;
+}
+
+.layout-content {
+  @apply flex h-full gap-10 items-start justify-between p-10 overflow-hidden transition-all duration-300;
+}
+
+header {
+  @apply hidden;
+}
+
+.nav {
+  @apply mt-10;
+}
+
+.nav-link {
+  @apply flex items-center gap-2 tracking-wide;
+}
+
+.nav-link > span:first-child {
+  @apply p-[1px] rounded-full transition-all duration-300 ease-in-out group-hover:w-20 group-hover:bg-shamrock-green;
+}
+
+.nav-link > span:last-child {
+  @apply font-bold transition-all duration-300 ease-in-out group-hover:text-shamrock-green;
+}
+
+.sidebar {
+  @apply flex flex-col justify-between h-full transition-all duration-300;
+}
+
+.hide-sidebar {
+  @apply hidden;
+}
+
+.sidebar > div {
+  @apply flex flex-col gap-0;
+}
+
+.sidebar h1 {
+  @apply text-5xl tracking-wide font-[300];
+}
+
+.sidebar span {
+  @apply text-sm font-thin opacity-50;
+}
+
+.sidebar p {
+  @apply mt-4 opacity-80 max-w-[55ch];
+}
+
+.sidebar nav {
+  @apply flex flex-col gap-5;
+}
+
+.sidebar nav ul {
+  @apply flex flex-col gap-6 font-thin;
+}
+
+.sidebar nav ul li {
+  @apply flex items-center gap-2 tracking-wide text-sm;
+}
+
+.sidebar nav ul li > a {
+  @apply flex items-center gap-2;
+}
+
+.sidebar nav ul li > a > span:first-child {
+  @apply text-ochre font-bold;
+}
+
+.sidebar nav ul li > a > span:last-child {
+  @apply font-[400] tracking-wide;
+}
+
+.sidebar .socials {
+  @apply flex flex-col gap-2;
+}
+
+.sidebar .socials h2 {
+  @apply text-xl;
+}
+
+.sidebar .socials ul {
+  @apply flex items-center gap-3;
+}
+
+.sidebar .socials li {
+  @apply relative;
+}
+
+.sidebar .socials li a {
+  @apply flex flex-col gap-[1px] items-center bg-transparent transition-all duration-300 ease-in-out;
+}
+
+.sidebar .socials li a span:first-child {
+  @apply text-shamrock-green;
+}
+
+.sidebar .socials li a span:last-child {
+  @apply relative p-[1px] rounded-full w-full h-[2px] transition-all duration-300 ease-in-out;
+}
+
+.sidebar .socials li a > span:last-child::after {
+  @apply content-[''] absolute top-0 left-0 w-0 h-full;
+}
+
+.sidebar nav > span {
+  @apply border-2 border-ochre px-5 py-2 rounded-sm text-xl text-ochre font-[400] uppercase tracking-wide shadow-md;
+}
+
+.projects,
+.experience,
+.about {
+  @apply flex flex-col gap-10 h-full px-5;
+}
+
+.projects .title,
+.experience .title,
+.about .title {
+  @apply hidden;
+}
+
+.projects .project-card {
+  @apply grid grid-cols-10 gap-4;
+}
+
+.projects .project-card > div:first-child {
+  @apply col-span-3 flex;
+}
+
+.projects .project-card > div:nth-child(2) {
+  @apply col-span-7 flex flex-col gap-3;
+}
+
+.projects .project-card > div:nth-child(2) a {
+  @apply hover:text-shamrock-green transition-all duration-300 ease-in-out;
+}
+
+.projects-card span.pill {
+  @apply bg-shamrock-green/20 text-shamrock-green text-xs px-2 py-1 rounded-md cursor-pointer w-fit hover:bg-shamrock-green/30 transition-all duration-300 ease-in-out;
+}
+
+.experience .experience-card {
+  @apply grid grid-cols-8 gap-4;
+}
+
+.experience .experience-card > div:first-child {
+  @apply col-span-2 flex;
+}
+
+.experience .experience-card > div:first-child > h2 {
+  @apply text-sm uppercase;
+}
+
+.experience .experience-card > div:last-child {
+  @apply col-span-6 flex flex-col gap-3;
+}
+
+.experience .experience-card > div:last-child a {
+  @apply flex justify-between items-start;
+}
+
+.experience .experience-card > a {
+  @apply hover:text-shamrock-green transition-all duration-300 ease-in-out flex justify-between items-center;
+}
+
+.hero {
+  @apply h-full;
+}
+
+.hero > div {
+  @apply container flex items-center justify-center h-full;
+}
+
+.hero h1 {
+  @apply text-7xl font-bold uppercase text-center max-w-[10ch] tracking-wide leading-15;
+}
+
+.hero h1 > span:first-child {
+  @apply text-ochre;
+}
+
+.hero h1 > span:nth-child(2) {
+  @apply font-[500];
+}
+
+.hero h1 > span:last-child {
+  @apply opacity-50;
+}
+
+.mobile-footer {
+  @apply hidden;
+}
+
+.copyright {
+  @apply text-[12px] text-silver/30 mt-1 font-mono;
+}
+
+.left {
+  @apply max-w-1/2;
+}
+
+.right {
+  @apply max-w-1/2;
+}
+
+/* Mobile styles */
+@media (max-width: 680px) {
+  body {
+    @apply h-full;
+  }
+
+  header {
+    @apply block;
+  }
+
+  .layout {
+    @apply h-full w-full m-0 border-none;
+  }
+
+  .layout-content {
+    @apply flex-col items-center p-5;
+  }
+
+  .sidebar-mobile {
+    @apply hidden;
+  }
+
+  .sidebar {
+    @apply w-full h-fit mt-16;
+  }
+
+  .left,
+  .right {
+    @apply max-w-full;
+  }
+
+  .sidebar > div {
+    @apply my-auto;
+  }
+
+  .sidebar h1 {
+    @apply text-3xl;
+  }
+
+  .sidebar p {
+    @apply text-sm border-l-2 border-shamrock-green pl-2;
+  }
+
+  .nav {
+    @apply hidden;
+  }
+
+  .sidebar .socials {
+    @apply hidden;
+  }
+
+  .about .title,
+  .projects .title,
+  .experience .title {
+    @apply block;
+  }
+
+  .about,
+  .projects,
+  .experience {
+    @apply w-full h-fit px-0 mt-16;
+  }
+
+  .projects .project-card,
+  .experience .experience-card {
+    @apply grid-cols-1;
+  }
+
+  .projects .project-card > div:first-child,
+  .projects .project-card > div:last-child {
+    @apply col-span-1;
+  }
+
+  .copyright {
+    @apply hidden;
+  }
+
+  .mobile-footer {
+    @apply flex flex-col items-center justify-center gap-2;
+  }
+
+  .mobile-footer ul {
+    @apply flex items-center gap-4 text-[16px];
+  }
+
+  .mobile-footer li a {
+    @apply text-shamrock-green pb-1 border-b-2 border-silver/20 hover:border-shamrock-green transition-all duration-300 ease-in-out;
+  }
+
+  .mobile-footer p {
+    @apply text-silver/50 text-[12px];
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 680px) and (max-width: 900px) {
+  header {
+    @apply hidden;
+  }
+
+  .layout {
+    @apply h-[95vh];
+  }
+
+  .sidebar h1 {
+    @apply text-3xl;
+  }
+
+  .sidebar p {
+    @apply text-sm;
+  }
+
+  .sidebar > div > p {
+    @apply text-[12px] mt-10 pl-2 border-l-2 border-shamrock-green;
+  }
+
+  .sidebar .socials > h2 {
+    @apply text-base;
+  }
+
+  .sidebar .socials ul {
+    @apply flex-wrap;
+  }
+
+  .sidebar .socials ul li a span:first-child {
+    @apply text-[12px] truncate max-w-[2ch] lowercase;
+  }
+
+  .layout-content {
+    @apply flex-row;
+  }
+
+  .experience .experience-card,
+  .projects .project-card {
+    @apply grid-cols-1;
+  }
+
+  .projects .project-card > div:first-child,
+  .projects .project-card > div:last-child {
+    @apply col-span-1;
+  }
+
+  .about p {
+    @apply text-sm;
+  }
+
+  .left {
+    @apply w-1/3;
+  }
+
+  .right {
+    @apply w-2/3;
+  }
+}
