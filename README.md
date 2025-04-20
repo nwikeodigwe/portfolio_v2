@@ -1,54 +1,138 @@
-# React + TypeScript + Vite
+# Nwike Odigwe - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Three.js. Features a beautiful dark theme with interactive shader effects and smooth transitions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Clean, minimalist interface with a dark theme
+- **Responsive Layout**: Optimized for mobile, tablet, and desktop views
+- **Interactive Shader Effects**: Custom WebGL shaders for dynamic background effects
+- **Smooth Animations**: CSS transitions and transforms for fluid interactions
+- **TypeScript**: Type-safe codebase for better maintainability
+- **Tailwind CSS**: Utility-first styling for rapid development
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **3D Graphics**: Three.js, React Three Fiber
+- **Routing**: React Router
+- **Icons**: React Icons
+- **Build Tool**: Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/nwikeodigwe/portfolio.git
+cd portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+## 🎨 Design System
+
+### Colors
+
+- Rich Black: `#101017`
+- Shamrock Green: `#089c6d`
+- Ochre: `#f27f04`
+- Silver: `#a6a6a5`
+- Gray: `#414141`
+
+### Typography
+
+- Primary Font: White Rabbit (monospace)
+- Secondary Font: Hind Vadodara (sans-serif)
+- Code Font: Fira Code (monospace)
+
+### Breakpoints
+
+- Mobile: < 680px
+- Tablet: 680px - 900px
+- Desktop: > 900px
+
+## 📱 Responsive Features
+
+### Mobile
+
+- Full-width layout
+- Simplified navigation
+- Optimized typography
+- Hidden social links
+- Stacked content sections
+
+### Tablet
+
+- Two-column layout
+- Adjusted font sizes
+- Flexible grid system
+- Optimized spacing
+
+### Desktop
+
+- Three-column layout
+- Full feature set
+- Maximum content width
+- Enhanced visual effects
+
+## 🎯 Project Structure
+
+```
+src/
+├── components/
+│   ├── common/         # Shared components
+│   ├── about/          # About section
+│   ├── experience/     # Experience section
+│   └── projects/       # Projects section
+├── router/             # Routing configuration
+└── style.css          # Global styles
+```
+
+## 🔧 Development
+
+### Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run lint`: Run ESLint
+- `npm run preview`: Preview production build
+
+### Code Style
+
+- Follows ESLint configuration
+- TypeScript strict mode enabled
+- React functional components
+- CSS using Tailwind utility classes
+
+## 📄 License
+
+MIT License - feel free to use this project as a template for your own portfolio.
+
+## 👨‍💻 Author
+
+Nwike Odigwe - [GitHub](https://github.com/nwikeodigwe) | [LinkedIn](https://linkedin.com/in/nwikeodigwe)
+
+## 🙏 Acknowledgments
+
+- [Three.js](https://threejs.org/) for WebGL capabilities
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber) for React integration
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [React Icons](https://react-icons.github.io/react-icons/) for icon set
