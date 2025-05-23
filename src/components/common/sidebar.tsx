@@ -1,8 +1,8 @@
 import { useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
+import { container, item } from "../../animation/container";
 import Nav from "./nav";
 import Socials from "./socials";
-import { container, item } from "../../animation/container";
 
 const Sidebar = () => {
   const location = useLocation();

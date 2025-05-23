@@ -3,10 +3,11 @@ import Shader from "./shader";
 import Sidebar from "./sidebar";
 import Footer from "./footer";
 import Header from "./header";
+import AnimatedBorder from "./animatedBorder";
 const Layout = () => {
   return (
     <>
-      <div className="layout my-auto">
+      <AnimatedBorder>
         <Shader />
         <Header />
         <div className="layout-content">
@@ -15,7 +16,7 @@ const Layout = () => {
           <Footer />
         </div>
         <p className="copyright">Ⓒ Nwike Odigwe</p>
-      </div>
+      </AnimatedBorder>
     </>
   );
 };
