@@ -1,4 +1,6 @@
 import { NavLink, Link } from "react-router";
+import { AnimatePresence, motion } from "motion/react";
+import { item, nav } from "../../animation/container";
 
 const links = [
   {
@@ -17,39 +19,48 @@ const links = [
 
 const Nav = () => {
   return (
-    <nav>
-      <ul>
-        {links.map((link, i) => (
-          <li key={i}>
-            <NavLink
-              to={link.link}
-              className={({ isActive }) =>
-                `group nav-link ${isActive ? "text-shamrock-green" : ""}`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  <span
-                    className={`${
-                      isActive ? "bg-shamrock-green w-20" : "bg-silver w-10"
-                    }`}
-                  ></span>
-                  <span className={`${isActive ? "text-shamrock-green" : ""}`}>
-                    {link.name}
-                  </span>
-                </>
-              )}
-            </NavLink>
-          </li>
-        ))}
+    <AnimatePresence>
+      <nav>
+        <motion.ul
+          variants={nav}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          {links.map((link, i) => (
+            <motion.li key={i} variants={item}>
+              <NavLink
+                to={link.link}
+                className={({ isActive }) =>
+                  `group nav-link ${isActive ? "text-shamrock-green" : ""}`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span
+                      className={`${
+                        isActive ? "bg-shamrock-green w-20" : "bg-silver w-10"
+                      }`}
+                    ></span>
+                    <span
+                      className={`${isActive ? "text-shamrock-green" : ""}`}
+                    >
+                      {link.name}
+                    </span>
+                  </>
+                )}
+              </NavLink>
+            </motion.li>
+          ))}
 
-        <li>
-          <Link to="mailto:nwikeodigwe@outlook.com" className="btn">
-            Get in touch
-          </Link>
-        </li>
-      </ul>
-    </nav>
+          <motion.li variants={item}>
+            <Link to="mailto:nwikeodigwe@outlook.com" className="btn">
+              Get in touch
+            </Link>
+          </motion.li>
+        </motion.ul>
+      </nav>
+    </AnimatePresence>
   );
 };
 

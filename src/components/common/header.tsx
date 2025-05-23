@@ -43,10 +43,10 @@ const Header = () => {
   return (
     <>
       <header className="absolute top-0 left-0 right-0 z-30">
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center pr-5">
           <button
             onClick={handleClick}
-            className={`text-2xl mr-10 mt-10 ${
+            className={`text-2xl mt-10 ${
               isOpen ? "text-white" : "text-shamrock-green"
             }`}
           >

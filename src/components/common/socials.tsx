@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import { motion } from "motion/react";
+import { container, item } from "../../animation/container";
 
 const socials = [
   {
@@ -25,19 +27,25 @@ const socials = [
 
 const Socials = () => {
   return (
-    <div className="socials">
-      <h2>Follow me</h2>
-      <ul>
+    <motion.div
+      variants={container}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      className="socials"
+    >
+      <motion.h2 variants={item}>Follow me</motion.h2>
+      <motion.ul variants={item}>
         {socials.map((social, i) => (
-          <li key={i}>
+          <motion.li key={i} variants={item}>
             <Link to={social.link} className="group">
               <span>{social.name}</span>
               <span className="bg-silver/50 group-hover:bg-shamrock-green after:group-hover:bg-shamrock-green"></span>
             </Link>
-          </li>
+          </motion.li>
         ))}
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   );
 };
 

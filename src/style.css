@@ -127,7 +127,7 @@ header {
 }
 
 .sidebar .socials h2 {
-  @apply text-xl;
+  @apply text-base;
 }
 
 .sidebar .socials ul {
@@ -303,6 +303,10 @@ header {
 
   .sidebar .socials {
     @apply hidden;
+  }
+
+  .title {
+    @apply text-3xl font-bold;
   }
 
   .about .title,

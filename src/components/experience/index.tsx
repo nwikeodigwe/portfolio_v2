@@ -1,4 +1,6 @@
 import Card from "./card";
+import { motion, AnimatePresence } from "motion/react";
+import { container, item } from "../../animation/container";
 
 const experience = [
   {
@@ -45,12 +47,22 @@ const experience = [
 
 const Index = () => {
   return (
-    <div className="experience scroll right">
-      <h2 className="title">Experience</h2>
-      {experience.map((item) => (
-        <Card key={item.id} {...item} />
-      ))}
-    </div>
+    <AnimatePresence>
+      <motion.div
+        variants={container}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="experience scroll right"
+      >
+        <motion.h2 variants={item} className="title">
+          Experience
+        </motion.h2>
+        {experience.map((item) => (
+          <Card key={item.id} {...item} />
+        ))}
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
