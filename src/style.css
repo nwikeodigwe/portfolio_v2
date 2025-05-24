@@ -19,6 +19,9 @@
   --font-white-rabbit: "White Rabbit", monospace;
 }
 
+html {
+  @apply scroll-smooth;
+}
 /* Base styles */
 body {
   @apply relative flex justify-center items-center h-screen font-white-rabbit content-center bg-rich-black text-silver;
@@ -41,7 +44,7 @@ body {
 }
 
 .scroll {
-  @apply overflow-y-auto overflow-x-hidden;
+  @apply overflow-y-auto scroll-smooth overflow-x-hidden;
   scrollbar-width: none;
   scrollbar-color: var(--color-shamrock-green) var(--color-rich-black);
 }

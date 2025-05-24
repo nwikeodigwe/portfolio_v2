@@ -4,6 +4,7 @@ import Sidebar from "./sidebar";
 import Footer from "./footer";
 import Header from "./header";
 import AnimatedBorder from "./animatedBorder";
+
 const Layout = () => {
   return (
     <>
