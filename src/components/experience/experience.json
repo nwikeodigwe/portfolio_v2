@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "time": "2018 - 2019",
+    "title": "Frontend developer",
+    "company": "Golden Reed Power Solutions",
+    "link": "#",
+    "description": "Built and maintained the company's website using React and Bootstrap. Implemented responsive design and ensured cross-browser compatibility.",
+    "technologies": ["React", "Bootstrap", "Chart.js"]
+  },
+  {
+    "id": 2,
+    "time": "2020 - 2021",
+    "title": "Full stack developer",
+    "company": "REMS",
+    "link": "#",
+    "description": "Developed a full-stack web application for managing real estate properties. Implemented features such as property listings, user authentication, and payment processing.",
+    "technologies": ["React", "Typescript", "Node.js", "Express", "Heroku"]
+  },
+  {
+    "id": 3,
+    "time": "2022 - 2023",
+    "title": "Frontend developer",
+    "company": "Joovlin",
+    "link": "#",
+    "description": "Developed and maintained the company's web application using React and Redux. Collaborated with designers to implement UI/UX improvements and optimize performance.",
+    "technologies": [
+      "React",
+      "Typescript",
+      "Node.js",
+      "Express",
+      "AWS",
+      "Chakra UI"
+    ]
+  }
+]

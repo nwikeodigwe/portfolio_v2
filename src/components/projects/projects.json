@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "image": "#",
+    "title": "Game hub utilizing RAWG API and React",
+    "description": "A game hub that allows users to search for games, view game details, and save games to their favorites list. Utilizes the RAWG API to fetch game data.",
+    "technologies": ["React", "HTML", "Chakra UI"],
+    "link": "https://game-dev-six.vercel.app/",
+    "repository": "https://github.com/nwikeodigwe/Game-dev"
+  },
+  {
+    "id": 2,
+    "image": "#",
+    "title": "Language Learning App",
+    "description": "A modern language learning application that helps users practice pronunciation and vocabulary through speech recognition and text-to-speech capabilities.",
+    "technologies": ["React", "Tailwind CSS"],
+    "link": "https://esmee.ws",
+    "repository": null
+  },
+  {
+    "id": 3,
+    "image": "#",
+    "title": "Wardrobe Fitter App API",
+    "description": "Wardrobe Fitter is a modern wardrobe management application that helps users organize, track, and style their clothing items",
+    "technologies": ["Express", "Node.js", "MYSQL"],
+    "link": null,
+    "repository": "https://github.com/nwikeodigwe/fitter"
+  },
+  {
+    "id": 4,
+    "image": "#",
+    "title": "HR Management System",
+    "description": "A comprehensive HR management system that streamlines employee management, payroll processing, and performance tracking.",
+    "technologies": ["Flask", "Python", "pytest", "SQLAlchemy"],
+    "link": null,
+    "repository": "https://github.com/nwikeodigwe/hr_service"
+  },
+  {
+    "id": 5,
+    "image": "#",
+    "title": "Dictionary API",
+    "description": "A RESTful API that provides definitions, synonyms, and translations for words in  english.",
+    "technologies": ["Express", "jest", "cheerio"],
+    "link": null,
+    "repository": "https://github.com/nwikeodigwe/dictionary"
+  },
+  {
+    "id": 6,
+    "image": "#",
+    "title": "Ecommerce API",
+    "description": "Ecommerce api build with django with emphasis on testing",
+    "technologies": ["Django", "pytest", "celery", "redis", "PostgreSQL"],
+    "link": null,
+    "repository": "https://github.com/nwikeodigwe/ecommerce"
+  },
+  {
+    "id": 7,
+    "image": "#",
+    "title": "Syncwave studios",
+    "description": "Syncwave studios is a modern music production studio that helps users create, edit, and share their music.",
+    "technologies": ["React", "Tailwind CSS"],
+    "link": "https://syncwave-phi.vercel.app/",
+    "repository": null
+  }
+]

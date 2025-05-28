@@ -25,13 +25,16 @@ const Card = (props: Props) => {
           <h2>{props.time}</h2>
         </motion.div>
         <motion.div variants={item}>
-          <Link to={props.link} target="_blank">
-            <h2>{props.title}</h2>
-            <span>
-              <GoLinkExternal />
-            </span>
-          </Link>
-          <p className="text-sm">{props.description}</p>
+          <div className="flex flex-col gap-1">
+            <Link to={props.link} target="_blank">
+              <h2>{props.title}</h2>
+              <span>
+                <GoLinkExternal />
+              </span>
+            </Link>
+            <p className="text-sm">{props.company}</p>
+          </div>
+          <p className="text-sm font-semibold">{props.description}</p>
           <div className="flex flex-wrap gap-2 items-center">
             {props.technologies.map((technology) => (
               <span
